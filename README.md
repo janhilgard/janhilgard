@@ -6,7 +6,7 @@ I'm a co-founder and CTO in the AI space. Before that, I founded and ran Hosting
 
 ### What I'm working on
 
-- **vllm-mlx** — I'm the second external contributor to [vllm-mlx](https://github.com/waybarrios/vllm-mlx), an OpenAI-compatible inference server built on MLX for Apple Silicon. Specific contributions:
+- **vllm-mlx** — Core contributor to [vllm-mlx](https://github.com/waybarrios/vllm-mlx) (80+ PRs; second external contributor by join order), an OpenAI-compatible inference server built on MLX for Apple Silicon. Specific contributions:
   - **MTP speculative decoding for Qwen3-Next** ([PR #82](https://github.com/waybarrios/vllm-mlx/pull/82), merged) — Multi-Token Prediction with always-advance strategy and rejection sampling; 1.43x verified / 1.76x optimistic on M3 Ultra
   - **Draft-model speculative decoding** ([PR #45](https://github.com/waybarrios/vllm-mlx/pull/45), merged) — HybridEngine sharing a single model instance across speculative and batched modes; 1.2–1.4x throughput improvement
   - Prefix caching, KV cache quantization, Anthropic Messages API integration, MoE model support
