@@ -1,24 +1,26 @@
-## Jan Hilgard — AI inference engineer, serial founder
+## Jan Hilgard — end-to-end AI builder (need → infra), ex-founder (Hosting90 exit)
 
-I build systems for running large language models efficiently on local hardware. Currently focused on inference engine optimization for Apple Silicon — specifically M3 Ultra deployments, MLX quantization (Q6/Q8), KV cache strategies, and agentic pipelines that actually work in production.
+I build AI products end-to-end — from the business need, to the agentic flows that run them, down to the infrastructure underneath: inference, proxies, data. When the economics demand it I go all the way down to the metal — that's where the inference work below comes from.
 
-I'm a co-founder and CTO in the AI space. Before that, I founded and ran Hosting90, a Czech hosting and cloud infrastructure company, for 18 years before exiting in 2020. That background in running infrastructure at scale informs how I think about LLM serving: reliability, latency, and resource efficiency matter more than benchmark headlines.
+Previously CTO at Miranda Media; before that I founded and ran Hosting90 (Czech hosting/cloud) for 18 years, exiting in 2020. That background in running infrastructure at scale informs how I think about LLM serving: reliability, latency, and resource efficiency over benchmark headlines. Open to fractional-CTO and advisory work.
 
 ### What I'm working on
 
 - **vllm-mlx** — Core contributor to [vllm-mlx](https://github.com/waybarrios/vllm-mlx) (80+ PRs; second external contributor by join order), an OpenAI-compatible inference server built on MLX for Apple Silicon. Specific contributions:
-  - **MTP speculative decoding for Qwen3-Next** ([PR #82](https://github.com/waybarrios/vllm-mlx/pull/82), merged) — Multi-Token Prediction with always-advance strategy and rejection sampling; 1.43x verified / 1.76x optimistic on M3 Ultra
-  - **Draft-model speculative decoding** ([PR #45](https://github.com/waybarrios/vllm-mlx/pull/45), merged) — HybridEngine sharing a single model instance across speculative and batched modes; 1.2–1.4x throughput improvement
-  - Prefix caching, KV cache quantization, Anthropic Messages API integration, MoE model support
-  - Assigned collaborator on [MTP roadmap for Qwen3-Next / MiMo / Qwen3.5 family](https://github.com/waybarrios/vllm-mlx/issues/56) alongside the repo owner
+- **MTP speculative decoding for Qwen3-Next** ([PR #82](https://github.com/waybarrios/vllm-mlx/pull/82), merged) — Multi-Token Prediction with always-advance strategy and rejection sampling; 1.43x verified / 1.76x optimistic on M3 Ultra
+- **Draft-model speculative decoding** ([PR #45](https://github.com/waybarrios/vllm-mlx/pull/45), merged) — HybridEngine sharing a single model instance across speculative and batched modes; 1.2–1.4x throughput improvement
+- Prefix caching, KV cache quantization, Anthropic Messages API integration, MoE model support
+- Assigned collaborator on [MTP roadmap for Qwen3-Next / MiMo / Qwen3.5 family](https://github.com/waybarrios/vllm-mlx/issues/56) alongside the repo owner
 - **vllm-mlx-dashboard** — Real-time monitoring dashboard for local LLM inference servers (llama.cpp + vllm-mlx), built with Next.js.
+- Data & access infrastructure — self-built residential LTE proxy pool (9 modems, CGNAT rotation) feeding production scraping for AI products. Writeup: https://hilgard.cz/writing/lte-proxy-pool
 - M3 Ultra (256 GB) benchmarking — sustained throughput, quantization tradeoffs, batch size effects at the edge of consumer hardware.
 
 ### Background
 
-- 2020–present: Co-founder & CTO, AI inference tooling
+- Now: independent — AI infrastructure builder, open to fractional-CTO & advisory
+- 2026: CTO, Miranda Media (built their AI products)
 - 2002–2020: Founder & CEO, Hosting90 (Czech hosting/cloud, exited)
-- Focus areas: inference optimization, local LLM deployment, agentic systems
+- Focus areas: inference optimization, agentic systems, local LLM deployment, data/access infrastructure
 
 ### Tech I work with
 
